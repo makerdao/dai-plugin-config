@@ -1,0 +1,43 @@
+{
+  "name": "@makerdao/dai-plugin-config",
+  "description": "A dai.js plugin for applying configuration objects async.",
+  "version": "0.0.1",
+  "license": "MIT",
+  "repository": {},
+  "dependencies": {
+    "babel-runtime": "^6.26.0",
+    "ramda": "^0.26.1"
+  },
+  "devDependencies": {
+    "@makerdao/dai": "^0.9.10",
+    "babel-cli": "^6.26.0",
+    "babel-eslint": "^10.0.1",
+    "babel-plugin-transform-runtime": "^6.23.0",
+    "babel-preset-env": "^1.7.0",
+    "babel-preset-stage-2": "^6.24.1",
+    "copyfiles": "^2.1.0",
+    "eslint": "^5.9.0",
+    "ganache-cli": "^6.1.8",
+    "husky": "^1.1.4",
+    "jest": "^23.5.0",
+    "lint-staged": "^8.0.4",
+    "prettier": "^1.14.2",
+    "sane": "^4.0.1",
+    "whatwg-fetch": "^3.0.0"
+  },
+  "scripts": {
+    "deploy": "yarn build && yarn publish dist",
+    "test": "jest --runInBand",
+    "build": "./scripts/build.sh",
+    "precommit": "lint-staged",
+    "build:watch": "sane ./scripts/build.sh src --wait=10"
+  },
+  "lint-staged": {
+    "*.{js,json}": [
+      "prettier --write --single-quote",
+      "git add"
+    ]
+  },
+  "module": "src/index.js",
+  "main": "src/index.js"
+}
