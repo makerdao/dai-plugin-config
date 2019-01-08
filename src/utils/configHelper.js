@@ -22,7 +22,7 @@ export const provider = {
     type: 'INFURA',
     network: 'kovan'
   },
-  ganache: { type: 'TEST', network: 'ganache' },
+  ganache: { type: 'HTTP', network: 'ganache' },
   taas: { type: 'HTTP' }
 };
 

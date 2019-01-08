@@ -1,7 +1,8 @@
 import fetchConfig from './fetchConfig';
 
 export default {
-  beforeCreate: async function(testchainId) {
+  beforeCreate: async function(pluginOptions) {
+    const { testchainId } = pluginOptions;
     const config = await fetchConfig(testchainId);
     //TODO: remove this placeholder http call
     const res = await fetch('https://jsonplaceholder.typicode.com/todos/1');

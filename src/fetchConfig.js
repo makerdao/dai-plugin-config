@@ -47,7 +47,6 @@ const mainnetConfig = {
 const ganacheConfig = {
   url: url.ganache,
   web3: web3,
-  privateKey: privateKey.ganache,
   accounts: accounts.ganache,
   provider: provider.ganache,
   smartContract: { addContracts }

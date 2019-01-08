@@ -10,9 +10,8 @@ const addedContracts = ['CHIEF', 'POLLING', 'PROXY_FACTORY'];
 
 const setupTestMakerInstance = async testchainId => {
   const makerConfig = {
-    plugins: [testchainClientPlugin],
-    log: false,
-    testchainId
+    plugins: [[testchainClientPlugin, { testchainId: testchainId }]],
+    log: false
   };
 
   const maker = await Maker.create('http', makerConfig);
@@ -20,7 +19,7 @@ const setupTestMakerInstance = async testchainId => {
   return maker;
 };
 
-each([kovanId, mainnetId, ganacheId]).test(
+each([mainnetId, kovanId, ganacheId]).test(
   'can create a Maker instance with a specific configuration based on a testchainId',
   async testchainId => {
     const maker = await setupTestMakerInstance(testchainId);
