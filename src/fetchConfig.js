@@ -29,7 +29,7 @@ const configHelper = testchainId => {
 const taasConfig = {
   url: url.taas,
   web3: web3,
-  privateKey: privateKey.ganache,
+  // privateKey: privateKey.ganache,
   accounts: accounts.ganache,
   provider: provider.taas,
   smartContract: { addContracts }
@@ -47,7 +47,8 @@ const mainnetConfig = {
 const ganacheConfig = {
   url: url.ganache,
   web3: web3,
-  accounts: accounts.ganache,
+  // privateKey: privateKey.ganache,
+  // accounts: accounts.ganache,
   provider: provider.ganache,
   smartContract: { addContracts }
 };
