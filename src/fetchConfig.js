@@ -13,11 +13,14 @@ export default async testchainId => {
 };
 
 const configHelper = testchainId => {
+  console.log('config helper testchainId', testchainId);
   switch (parseInt(testchainId)) {
     case 1:
       return mainnetConfig;
     case 2:
       return taasConfig;
+    case 3:
+      return configNoContracts;
     case 42:
       return kovanConfig;
     case 999:
@@ -26,6 +29,18 @@ const configHelper = testchainId => {
       break;
   }
 };
+
+/* this config deploys no contracts, use it to test that contracts exist 
+on a previous chains snapshot
+*/
+const configNoContracts = {
+  url: url.taas, //8545
+  web3: web3,
+  // privateKey: privateKey.ganache,
+  accounts: accounts.ganache,
+  provider: provider.taas
+};
+
 const taasConfig = {
   url: url.taas,
   web3: web3,
