@@ -7,30 +7,31 @@ import {
 } from './utils/configHelper';
 import { privateKey } from './keys';
 
-export default async testchainId => {
-  const config = configHelper(testchainId);
+export default async pluginOptions => {
+  const config = configHelper(pluginOptions);
+  console.log(config);
   return config;
 };
 
-const configHelper = testchainId => {
-  console.log('config helper testchainId', testchainId);
+const configHelper = pluginOptions => {
+  const { testchainId, url } = pluginOptions;
   switch (parseInt(testchainId)) {
     case 1:
       return mainnetConfig;
     case 2:
-      return taasConfig;
+      return { ...taasConfig, url };
     case 3:
-      return configNoContracts;
+      return { ...configNoContracts, url };
     case 42:
       return kovanConfig;
     case 999:
-      return ganacheConfig;
+      return { ...ganacheConfig, url };
     default:
       break;
   }
 };
 
-/* this config deploys no contracts, use it to test that contracts exist 
+/* this config deploys no contracts, use it to test that contracts exist
 on a previous chains snapshot
 */
 const configNoContracts = {
