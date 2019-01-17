@@ -8,24 +8,25 @@ import {
 import { privateKey } from './keys';
 
 export default async pluginOptions => {
-  const config = configHelper(pluginOptions);
+  const { testchainId, url } = pluginOptions;
+  const config = configHelper(testchainId);
+  if (url) config.url = url;
   console.log(config);
   return config;
 };
 
-const configHelper = pluginOptions => {
-  const { testchainId, url } = pluginOptions;
+const configHelper = testchainId => {
   switch (parseInt(testchainId)) {
     case 1:
       return mainnetConfig;
     case 2:
-      return { ...taasConfig, url };
+      return taasConfig;
     case 3:
-      return { ...configNoContracts, url };
+      return configNoContracts;
     case 42:
       return kovanConfig;
     case 999:
-      return { ...ganacheConfig, url };
+      return ganacheConfig;
     default:
       break;
   }
