@@ -1,5 +1,5 @@
 import Maker from '@makerdao/dai';
-import testchainClientPlugin from '../src';
+import configPlugin from '../src';
 import each from 'jest-each';
 import 'whatwg-fetch';
 
@@ -10,7 +10,7 @@ const addedContracts = ['CHIEF', 'POLLING', 'PROXY_FACTORY'];
 
 const setupTestMakerInstance = async testchainId => {
   const makerConfig = {
-    plugins: [[testchainClientPlugin, { testchainId: testchainId }]],
+    plugins: [[configPlugin, { testchainId: testchainId }]],
     log: false
   };
 
