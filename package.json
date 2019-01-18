@@ -9,7 +9,7 @@
     "ramda": "^0.26.1"
   },
   "devDependencies": {
-    "@makerdao/dai": "^0.9.10",
+    "@makerdao/dai": "^0.10.0",
     "babel-cli": "^6.26.0",
     "babel-eslint": "^10.0.1",
     "babel-plugin-transform-runtime": "^6.23.0",
