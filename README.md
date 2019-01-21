@@ -2,6 +2,9 @@
 Dai Config Plugin
 </h1>
 
+[![GitHub License][license]][license-url]
+[![NPM][npm]][npm-url]
+
 ### Development
 
 This plugin takes a testchain ID and retrives a `Maker` configuration object. When used with Dai.js as a plugin, the configuration will be used to create a new `Maker` instance.
@@ -17,3 +20,6 @@ We run Prettier on-commit, which means you can write code in whatever style you 
 The dai config plugin is [MIT licensed](./LICENSE).
 
 [license]: https://img.shields.io/badge/license-MIT-blue.svg
+[license-url]: https://github.com/makerdao/dai-plugin-config/blob/master/LICENSE
+[npm]: https://img.shields.io/npm/v/@makerdao/dai-plugin-config.svg?style=flat
+[npm-url]: https://www.npmjs.com/package/@makerdao/dai-plugin-config
