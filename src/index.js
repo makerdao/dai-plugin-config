@@ -1,4 +1,10 @@
-import { addContracts, web3 } from './utils/configHelper';
+import { getContracts, web3, runDeployContracts } from './utils/configHelper';
+const APP_URL_DEV = 'http://localhost:4000/chain/';
+
+const url =
+  process.env.NODE_ENV === 'development'
+    ? APP_URL_DEV
+    : 'http://localhost:4000/chain/';
 
 /**
  * Notes:
@@ -7,14 +13,23 @@ import { addContracts, web3 } from './utils/configHelper';
 
 export default {
   beforeCreate: async function(pluginOptions) {
-    let { testchainId, accountsProvider = 'privateKey' } = pluginOptions;
+    let {
+      testchainId,
+      deployContracts = false,
+      accountsProvider = 'privateKey'
+    } = pluginOptions;
 
-    const res = await fetch(`http://localhost:4000/chain/${testchainId}`);
+    const res = await fetch(`${url}${testchainId}`);
     const json = await res.json();
-
     const { rpc_url, accounts: chainAccounts } = json.details;
+    const port = rpc_url.substring(17);
+    if (deployContracts) {
+      const result = await runDeployContracts(port);
+      console.log(result);
+    }
 
-    console.log('chain accounts before reformat', chainAccounts);
+    const addContracts = getContracts();
+    console.log(addContracts);
 
     // hack until we get network ID back from the endpoint
     const network = 'ganache';
@@ -33,9 +48,9 @@ export default {
       provider: {
         type: 'HTTP',
         network
-      }
+      },
       // accounts,
-      // smartContract: { addContracts }
+      smartContract: { addContracts }
     };
 
     return config;
