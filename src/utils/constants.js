@@ -1,3 +1,4 @@
+export const ZERO_ADDRESS = '0x0000000000000000000000000000000000000000';
 /* Contracts */
 export const PROXY_FACTORY = 'PROXY_FACTORY';
 export const POLLING = 'POLLING';

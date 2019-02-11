@@ -1,0 +1,11 @@
+[
+  {
+    "constant": false,
+    "inputs": [{ "name": "", "type": "bytes32" }],
+    "name": "join",
+    "outputs": [],
+    "payable": true,
+    "stateMutability": "payable",
+    "type": "function"
+  }
+]

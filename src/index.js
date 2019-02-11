@@ -29,13 +29,12 @@ export default {
     const addContracts = formatContracts(deploy_data);
     console.log('add these contracts', addContracts);
 
-    // remove the coinbase account from the accountss
-    accounts.map(account => {
-      accounts[account.address] = {
-        type: accountsProvider,
-        key: account.priv_key
-      };
-    });
+    // accounts.map(account => {
+    //   accounts[account.address] = {
+    //     type: accountsProvider,
+    //     key: account.priv_key
+    //   };
+    // });
 
     const config = {
       url: rpc_url,

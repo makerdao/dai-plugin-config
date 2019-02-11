@@ -1,0 +1,11 @@
+[
+  {
+    "constant": true,
+    "inputs": [],
+    "name": "vat",
+    "outputs": [{ "name": "", "type": "address" }],
+    "payable": false,
+    "stateMutability": "view",
+    "type": "function"
+  }
+]
