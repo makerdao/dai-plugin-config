@@ -1,8 +1,4 @@
-import {
-  formatContracts,
-  web3,
-  runDeployContracts
-} from './utils/configHelper';
+import { formatContracts } from './utils/configHelper';
 const APP_URL_DEV = 'http://localhost:4000/chain/';
 const APP_URL_PROD = 'http://18.185.172.121:4000/chain/';
 
@@ -19,36 +15,21 @@ export default {
     let {
       testchainId,
       deployContracts = false,
-      accountsProvider = 'privateKey',
-      externalApi = '' // allow for an external api url override
+      accountsProvider = 'privateKey'
     } = pluginOptions;
 
     const res = await fetch(`${url}${testchainId}`);
     const json = await res.json();
 
-    // const { rpc_url, accounts: chainAccounts } = json.details;
-    // console.log('JSON details', json.details);
-
-    const { chain_details, deploy_data } = json.details;
+    const { chain_details, deploy_data, config: chainConfig } = json.details;
     console.log(chain_details, deploy_data);
 
     const { rpc_url, accounts } = chain_details;
 
-    const port = rpc_url.substring(17);
-
-    if (deployContracts) {
-      const result = await runDeployContracts(port);
-      console.log(result);
-    }
-
     const addContracts = formatContracts(deploy_data);
     console.log('add these contracts', addContracts);
 
-    // hack until we get network ID back from the endpoint
-    const network = 'ganache';
-
-    // const accounts = {};
-    // remove the coinbase account from the accounts
+    // remove the coinbase account from the accountss
     accounts.map(account => {
       accounts[account.address] = {
         type: accountsProvider,
@@ -60,10 +41,18 @@ export default {
       url: rpc_url,
       provider: {
         type: 'HTTP',
-        network
+        network: chainConfig.type
       },
       // accounts,
-      smartContract: { addContracts }
+      smartContract: { addContracts },
+      token: {
+        erc20: [
+          {
+            symbol: 'MKR',
+            address: deploy_data.MCD_GOV
+          }
+        ]
+      }
     };
 
     return config;
