@@ -1,4 +1,3 @@
-import { ZERO_ADDRESS, MCD_ADM, PROXY_FACTORY, POLLING } from './constants';
 import abiMap from '../../contracts/abiMap.json';
 
 export const formatContracts = deployedContracts => {
