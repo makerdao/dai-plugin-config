@@ -19,7 +19,7 @@ const setupTestMakerInstance = async testchainId => {
   return maker;
 };
 
-test('can create a Maker instance with a specific configuration based on a testchainId', async () => {
+test.skip('can create a Maker instance with a specific configuration based on a testchainId', async () => {
   const testchainId = '3563321456763763453';
   const expectedTokens = ['DAI', 'MKR', 'WETH', 'PETH', 'ETH'];
 
