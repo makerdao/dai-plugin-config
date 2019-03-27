@@ -1,6 +1,10 @@
 import { formatContracts } from './utils/configHelper';
 const APP_URL_DEV = 'http://localhost:4000/chain/';
 const APP_URL_PROD = 'http://18.185.172.121:4000/chain/';
+import { createCurrency } from '@makerdao/currency';
+
+const MKR = createCurrency('MKR');
+const IOU = createCurrency('IOU');
 
 export default {
   beforeCreate: async function(pluginOptions) {
@@ -12,8 +16,6 @@ export default {
 
     const { chain_details, deploy_data, config: chainConfig } = json.details;
     const { rpc_url, accounts } = chain_details;
-
-    console.log('deploy_data', deploy_data);
 
     const addContracts = formatContracts(deploy_data);
 
@@ -34,8 +36,14 @@ export default {
       token: {
         erc20: [
           {
-            symbol: 'MKR',
+            currency: MKR,
+            symbol: MKR.symbol,
             address: deploy_data.MCD_GOV
+          },
+          {
+            currency: IOU,
+            symbol: IOU.symbol,
+            address: deploy_data.IOU
           }
         ]
       }
