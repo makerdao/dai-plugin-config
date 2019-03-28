@@ -14,5 +14,8 @@ export const formatContracts = deployedContracts => {
       }.json`);
   }
 
+  // Chief is required for SCD
+  if (addContracts['MCD_ADM']) addContracts.CHIEF = addContracts['MCD_ADM'];
+
   return addContracts;
 };
