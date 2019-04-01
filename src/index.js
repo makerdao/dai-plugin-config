@@ -6,6 +6,8 @@ import { createCurrency } from '@makerdao/currency';
 const MKR = createCurrency('MKR');
 const IOU = createCurrency('IOU');
 
+let config = {};
+
 export default {
   beforeCreate: async function(pluginOptions) {
     let { testchainId } = pluginOptions;
@@ -19,7 +21,7 @@ export default {
 
     const addContracts = formatContracts(deploy_data);
 
-    const config = {
+    const settings = {
       url: rpc_url,
       provider: {
         type: 'HTTP',
@@ -49,6 +51,14 @@ export default {
       }
     };
 
-    return config;
+    Object.assign(config, settings);
+
+    return {};
+  },
+  addConfig: function(existingConfig) {
+    return {
+      ...existingConfig,
+      ...config
+    };
   }
 };
