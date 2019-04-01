@@ -21,7 +21,7 @@ export default {
 
     const addContracts = formatContracts(deploy_data);
 
-    const settings = {
+    config = {
       url: rpc_url,
       provider: {
         type: 'HTTP',
@@ -40,18 +40,16 @@ export default {
           {
             currency: MKR,
             symbol: MKR.symbol,
-            address: deploy_data.MCD_GOV
+            address: addContracts.MCD_GOV.address.testnet
           },
           {
             currency: IOU,
             symbol: IOU.symbol,
-            address: deploy_data.IOU
+            address: addContracts.IOU.address.testnet
           }
         ]
       }
     };
-
-    Object.assign(config, settings);
 
     return {};
   },

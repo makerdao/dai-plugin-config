@@ -13,6 +13,7 @@
   "MCD_FLIP_REP": "Flipper",
   "MCD_FLOP": "Flopper",
   "MCD_GOV": "DSToken",
+  "IOU": "DSToken",
   "MCD_JOIN_DAI": "DaiJoin",
   "MCD_JOIN_DGX": "GemJoin",
   "MCD_JOIN_ETH": "GemJoin",

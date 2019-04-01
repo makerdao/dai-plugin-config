@@ -1,7 +1,12 @@
 import abiMap from '../../contracts/abiMap.json';
+import { ZERO_ADDRESS } from './constants';
 
 export const formatContracts = deployedContracts => {
   let addContracts = {};
+
+  // We need to ensure IOU is present on addContracts to add the token successfully.
+  if (!deployedContracts['IOU']) deployedContracts.IOU = ZERO_ADDRESS;
+
   for (let contract in deployedContracts) {
     addContracts[contract] = {
       address: {
