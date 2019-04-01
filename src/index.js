@@ -19,10 +19,6 @@ export default {
     const { chain_details, deploy_data, config: chainConfig } = json.details;
     const { rpc_url, accounts } = chain_details;
 
-    // FIXME: deploy_data is missing IOU, it will be added after 4/4/19 deployment
-    // TODO: can we get IOU address from chief contract dynamically until solved?
-    deploy_data.IOU = '0xc5996bab8c3531b19f2e62c1b7293637c8b76961';
-
     const addContracts = formatContracts(deploy_data);
 
     const settings = {
