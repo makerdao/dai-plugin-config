@@ -1,5 +1,5 @@
 import abiMap from '../../contracts/abiMap.json';
-import tokens from '../../contracts/tokens';
+import tokens from '../../contracts/tokens.json';
 import { createCurrency } from '@makerdao/currency';
 
 export const formatContracts = deployedContracts => {
