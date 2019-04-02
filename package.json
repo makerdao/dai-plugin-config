@@ -1,7 +1,7 @@
 {
   "name": "@makerdao/dai-plugin-config",
   "description": "A dai.js plugin for retrieving Dai.js configuration objects async.",
-  "version": "0.2.3-rc.1",
+  "version": "0.2.3-rc.2",
   "license": "MIT",
   "repository": {},
   "dependencies": {
