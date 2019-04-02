@@ -1,23 +1,12 @@
 import abiMap from '../../contracts/abiMap.json';
-import { ZERO_ADDRESS } from './constants';
 
 export const formatContracts = deployedContracts => {
-  let addContracts = {};
-
-  // We need to ensure IOU is present on addContracts to add the token successfully.
-  if (!deployedContracts['IOU']) deployedContracts.IOU = ZERO_ADDRESS;
-
-  for (let contract in deployedContracts) {
-    addContracts[contract] = {
-      address: {
-        testnet: deployedContracts[contract]
-      }
-    };
-    if (abiMap[contract])
-      addContracts[contract].abi = require(`../../contracts/abis/${
-        abiMap[contract]
-      }.json`);
-  }
+  const addContracts = Object.keys(deployedContracts).reduce((result, key) => {
+    result[key] = { address: { testnet: deployedContracts[key] } };
+    if (abiMap[key])
+      result[key].abi = require(`../../contracts/abis/${abiMap[key]}.json`);
+    return result;
+  }, {});
 
   // Chief is required for SCD
   if (addContracts['MCD_ADM']) addContracts.CHIEF = addContracts['MCD_ADM'];
