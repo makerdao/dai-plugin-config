@@ -10,8 +10,9 @@ export const formatContracts = deployedContracts => {
     return result;
   }, {});
 
-  // Chief is required for SCD
+  // These MCD contracts are also required for SCD
   if (addContracts['MCD_ADM']) addContracts.CHIEF = addContracts['MCD_ADM'];
+  if (addContracts['MCD_IOU']) addContracts.IOU = addContracts['MCD_IOU'];
 
   return addContracts;
 };
