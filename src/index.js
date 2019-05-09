@@ -5,10 +5,11 @@ const APP_URL_PROD = 'http://18.185.172.121:4000/chain/';
 let config = {};
 
 export default {
-  beforeCreate: async function(pluginOptions) {
-    let { testchainId } = pluginOptions;
-    const url = APP_URL_PROD;
+  beforeCreate: async function({ testchainId }) {
+    const url =
+      window.location.hostname === 'localhost' ? APP_URL_DEV : APP_URL_PROD;
 
+    console.log('fetch url', `${url}${testchainId}`);
     const res = await fetch(`${url}${testchainId}`);
     const json = await res.json();
 
@@ -24,13 +25,18 @@ export default {
         type: 'HTTP',
         network: chainConfig.type
       },
-      accounts: {
-        owner: {
-          address: accounts[0].address,
-          type: 'provider',
-          key: accounts[0].priv_key
-        }
-      },
+      // accounts: {
+      //   // usera: {
+      //   //   // address: accounts[1].address,
+      //   //   type: 'provider',
+      //   //   key: accounts[1].priv_key
+      //   // }
+      //   owner: {
+      //     address: accounts[0].address,
+      //     type: 'provider',
+      //     key: accounts[0].priv_key
+      //   }
+      // },
       smartContract: { addContracts },
       token: { erc20 }
     };

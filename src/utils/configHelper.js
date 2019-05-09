@@ -13,6 +13,10 @@ export const formatContracts = deployedContracts => {
   // These MCD contracts are also required for SCD
   if (addContracts['MCD_ADM']) addContracts.CHIEF = addContracts['MCD_ADM'];
   if (addContracts['MCD_IOU']) addContracts.IOU = addContracts['MCD_IOU'];
+  if (addContracts['MCD_DAI_GUARD'])
+    addContracts.MCD_DAI_GUARD = {
+      address: { testnet: '0x2a92ccf051f33912115f86ea0530f4999e3ac1ac' }
+    };
 
   return addContracts;
 };
