@@ -39,7 +39,7 @@
   },
   {
     "constant": false,
-    "inputs": [{ "name": "guy", "type": "address" }],
+    "inputs": [{ "name": "usr", "type": "address" }],
     "name": "rely",
     "outputs": [],
     "payable": false,
@@ -66,7 +66,7 @@
   },
   {
     "constant": false,
-    "inputs": [{ "name": "guy", "type": "address" }],
+    "inputs": [{ "name": "usr", "type": "address" }],
     "name": "deny",
     "outputs": [],
     "payable": false,
@@ -143,11 +143,10 @@
   {
     "anonymous": false,
     "inputs": [
-      { "indexed": true, "name": "id", "type": "uint256" },
+      { "indexed": false, "name": "id", "type": "uint256" },
       { "indexed": false, "name": "lot", "type": "uint256" },
       { "indexed": false, "name": "bid", "type": "uint256" },
-      { "indexed": false, "name": "gal", "type": "address" },
-      { "indexed": false, "name": "end", "type": "uint48" }
+      { "indexed": true, "name": "gal", "type": "address" }
     ],
     "name": "Kick",
     "type": "event"
@@ -155,12 +154,11 @@
   {
     "anonymous": true,
     "inputs": [
-      { "indexed": true, "name": "sig", "type": "bytes4" },
-      { "indexed": true, "name": "guy", "type": "address" },
-      { "indexed": true, "name": "foo", "type": "bytes32" },
-      { "indexed": true, "name": "bar", "type": "bytes32" },
-      { "indexed": false, "name": "wad", "type": "uint256" },
-      { "indexed": false, "name": "fax", "type": "bytes" }
+      { "indexed": true, "name": "hash", "type": "bytes4" },
+      { "indexed": true, "name": "user", "type": "address" },
+      { "indexed": true, "name": "arg1", "type": "bytes32" },
+      { "indexed": true, "name": "arg2", "type": "bytes32" },
+      { "indexed": false, "name": "data", "type": "bytes" }
     ],
     "name": "LogNote",
     "type": "event"

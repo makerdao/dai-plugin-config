@@ -18,15 +18,6 @@
     "type": "function"
   },
   {
-    "constant": true,
-    "inputs": [],
-    "name": "daiMoveFab",
-    "outputs": [{ "name": "", "type": "address" }],
-    "payable": false,
-    "stateMutability": "view",
-    "type": "function"
-  },
-  {
     "constant": false,
     "inputs": [{ "name": "gov", "type": "address" }],
     "name": "deployTaxation",
@@ -46,6 +37,20 @@
   },
   {
     "constant": false,
+    "inputs": [
+      { "name": "symbol", "type": "string" },
+      { "name": "name", "type": "string" },
+      { "name": "version", "type": "string" },
+      { "name": "chainId", "type": "uint256" }
+    ],
+    "name": "deployDai",
+    "outputs": [],
+    "payable": false,
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "constant": false,
     "inputs": [],
     "name": "deployVat",
     "outputs": [],
@@ -57,6 +62,15 @@
     "constant": true,
     "inputs": [],
     "name": "daiJoinFab",
+    "outputs": [{ "name": "", "type": "address" }],
+    "payable": false,
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "constant": true,
+    "inputs": [],
+    "name": "spotter",
     "outputs": [{ "name": "", "type": "address" }],
     "payable": false,
     "stateMutability": "view",
@@ -83,16 +97,7 @@
   {
     "constant": true,
     "inputs": [],
-    "name": "mom",
-    "outputs": [{ "name": "", "type": "address" }],
-    "payable": false,
-    "stateMutability": "view",
-    "type": "function"
-  },
-  {
-    "constant": true,
-    "inputs": [],
-    "name": "daiMove",
+    "name": "daiFab",
     "outputs": [{ "name": "", "type": "address" }],
     "payable": false,
     "stateMutability": "view",
@@ -108,17 +113,21 @@
     "type": "function"
   },
   {
-    "constant": false,
-    "inputs": [
-      { "name": "ilk", "type": "bytes32" },
-      { "name": "adapter", "type": "address" },
-      { "name": "mover", "type": "address" },
-      { "name": "pip", "type": "address" }
-    ],
-    "name": "deployCollateral",
-    "outputs": [],
+    "constant": true,
+    "inputs": [],
+    "name": "pot",
+    "outputs": [{ "name": "", "type": "address" }],
     "payable": false,
-    "stateMutability": "nonpayable",
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "constant": true,
+    "inputs": [],
+    "name": "jugFab",
+    "outputs": [{ "name": "", "type": "address" }],
+    "payable": false,
+    "stateMutability": "view",
     "type": "function"
   },
   {
@@ -131,18 +140,9 @@
     "type": "function"
   },
   {
-    "constant": true,
-    "inputs": [],
-    "name": "pitFab",
-    "outputs": [{ "name": "", "type": "address" }],
-    "payable": false,
-    "stateMutability": "view",
-    "type": "function"
-  },
-  {
     "constant": false,
-    "inputs": [{ "name": "dev", "type": "address" }],
-    "name": "rely",
+    "inputs": [],
+    "name": "releaseAuth",
     "outputs": [],
     "payable": false,
     "stateMutability": "nonpayable",
@@ -178,15 +178,6 @@
   {
     "constant": true,
     "inputs": [],
-    "name": "dripFab",
-    "outputs": [{ "name": "", "type": "address" }],
-    "payable": false,
-    "stateMutability": "view",
-    "type": "function"
-  },
-  {
-    "constant": true,
-    "inputs": [],
     "name": "flipFab",
     "outputs": [{ "name": "", "type": "address" }],
     "payable": false,
@@ -194,9 +185,31 @@
     "type": "function"
   },
   {
+    "constant": false,
+    "inputs": [
+      { "name": "ilk", "type": "bytes32" },
+      { "name": "adapter", "type": "address" },
+      { "name": "pip", "type": "address" }
+    ],
+    "name": "deployCollateral",
+    "outputs": [],
+    "payable": false,
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
     "constant": true,
     "inputs": [],
-    "name": "guard",
+    "name": "pause",
+    "outputs": [{ "name": "", "type": "address" }],
+    "payable": false,
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "constant": true,
+    "inputs": [],
+    "name": "jug",
     "outputs": [{ "name": "", "type": "address" }],
     "payable": false,
     "stateMutability": "view",
@@ -214,34 +227,7 @@
   {
     "constant": true,
     "inputs": [],
-    "name": "guardFab",
-    "outputs": [{ "name": "", "type": "address" }],
-    "payable": false,
-    "stateMutability": "view",
-    "type": "function"
-  },
-  {
-    "constant": true,
-    "inputs": [],
     "name": "spotFab",
-    "outputs": [{ "name": "", "type": "address" }],
-    "payable": false,
-    "stateMutability": "view",
-    "type": "function"
-  },
-  {
-    "constant": true,
-    "inputs": [],
-    "name": "drip",
-    "outputs": [{ "name": "", "type": "address" }],
-    "payable": false,
-    "stateMutability": "view",
-    "type": "function"
-  },
-  {
-    "constant": true,
-    "inputs": [],
-    "name": "tokenFab",
     "outputs": [{ "name": "", "type": "address" }],
     "payable": false,
     "stateMutability": "view",
@@ -268,15 +254,6 @@
   {
     "constant": true,
     "inputs": [],
-    "name": "proxyFab",
-    "outputs": [{ "name": "", "type": "address" }],
-    "payable": false,
-    "stateMutability": "view",
-    "type": "function"
-  },
-  {
-    "constant": true,
-    "inputs": [],
     "name": "authority",
     "outputs": [{ "name": "", "type": "address" }],
     "payable": false,
@@ -293,18 +270,21 @@
     "type": "function"
   },
   {
-    "constant": false,
-    "inputs": [{ "name": "authority", "type": "address" }],
-    "name": "deployMom",
-    "outputs": [],
+    "constant": true,
+    "inputs": [],
+    "name": "pauseFab",
+    "outputs": [{ "name": "", "type": "address" }],
     "payable": false,
-    "stateMutability": "nonpayable",
+    "stateMutability": "view",
     "type": "function"
   },
   {
     "constant": false,
-    "inputs": [],
-    "name": "deployPit",
+    "inputs": [
+      { "name": "delay", "type": "uint256" },
+      { "name": "authority", "type": "address" }
+    ],
+    "name": "deployPause",
     "outputs": [],
     "payable": false,
     "stateMutability": "nonpayable",
@@ -316,9 +296,7 @@
     "name": "ilks",
     "outputs": [
       { "name": "flip", "type": "address" },
-      { "name": "adapter", "type": "address" },
-      { "name": "mover", "type": "address" },
-      { "name": "spotter", "type": "address" }
+      { "name": "adapter", "type": "address" }
     ],
     "payable": false,
     "stateMutability": "view",
@@ -345,7 +323,7 @@
   {
     "constant": true,
     "inputs": [],
-    "name": "pit",
+    "name": "potFab",
     "outputs": [{ "name": "", "type": "address" }],
     "payable": false,
     "stateMutability": "view",
@@ -361,30 +339,19 @@
     "type": "function"
   },
   {
-    "constant": false,
-    "inputs": [],
-    "name": "deployDai",
-    "outputs": [],
-    "payable": false,
-    "stateMutability": "nonpayable",
-    "type": "function"
-  },
-  {
     "inputs": [
       { "name": "vatFab_", "type": "address" },
-      { "name": "pitFab_", "type": "address" },
-      { "name": "dripFab_", "type": "address" },
+      { "name": "jugFab_", "type": "address" },
       { "name": "vowFab_", "type": "address" },
       { "name": "catFab_", "type": "address" },
-      { "name": "tokenFab_", "type": "address" },
-      { "name": "guardFab_", "type": "address" },
+      { "name": "daiFab_", "type": "address" },
       { "name": "daiJoinFab_", "type": "address" },
-      { "name": "daiMoveFab_", "type": "address" },
       { "name": "flapFab_", "type": "address" },
       { "name": "flopFab_", "type": "address" },
       { "name": "flipFab_", "type": "address" },
       { "name": "spotFab_", "type": "address" },
-      { "name": "proxyFab_", "type": "address" }
+      { "name": "potFab_", "type": "address" },
+      { "name": "pauseFab_", "type": "address" }
     ],
     "payable": false,
     "stateMutability": "nonpayable",

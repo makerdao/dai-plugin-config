@@ -16,7 +16,7 @@ const setUrl = env => {
 };
 
 export default {
-  beforeCreate: async function({ testchainId, backendEnv = 'dev' }) {
+  beforeCreate: async function({ testchainId, backendEnv = 'prod' }) {
     const url = setUrl(backendEnv);
     console.log('fetch url', `${url}${testchainId}`);
 

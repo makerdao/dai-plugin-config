@@ -1,19 +1,10 @@
 [
   {
     "constant": false,
-    "inputs": [{ "name": "", "type": "address" }],
-    "name": "file",
-    "outputs": [],
-    "payable": false,
-    "stateMutability": "nonpayable",
-    "type": "function"
-  },
-  {
-    "constant": false,
     "inputs": [
-      { "name": "", "type": "bytes32" },
-      { "name": "", "type": "bytes32" },
-      { "name": "", "type": "uint256" }
+      { "name": "who", "type": "address" },
+      { "name": "what", "type": "bytes32" },
+      { "name": "data", "type": "bytes32" }
     ],
     "name": "file",
     "outputs": [],
@@ -23,18 +14,9 @@
   },
   {
     "constant": false,
-    "inputs": [{ "name": "", "type": "uint256" }],
-    "name": "file",
-    "outputs": [],
-    "payable": false,
-    "stateMutability": "nonpayable",
-    "type": "function"
-  },
-  {
-    "constant": false,
     "inputs": [
-      { "name": "", "type": "bytes32" },
-      { "name": "", "type": "uint256" }
+      { "name": "who", "type": "address" },
+      { "name": "data", "type": "address" }
     ],
     "name": "file",
     "outputs": [],
@@ -44,7 +26,10 @@
   },
   {
     "constant": false,
-    "inputs": [{ "name": "", "type": "bytes32" }],
+    "inputs": [
+      { "name": "who", "type": "address" },
+      { "name": "ilk", "type": "bytes32" }
+    ],
     "name": "init",
     "outputs": [],
     "payable": false,
@@ -53,7 +38,37 @@
   },
   {
     "constant": false,
-    "inputs": [{ "name": "", "type": "address" }],
+    "inputs": [
+      { "name": "who", "type": "address" },
+      { "name": "ilk", "type": "bytes32" },
+      { "name": "what", "type": "bytes32" },
+      { "name": "data", "type": "address" }
+    ],
+    "name": "file",
+    "outputs": [],
+    "payable": false,
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "constant": false,
+    "inputs": [
+      { "name": "who", "type": "address" },
+      { "name": "what", "type": "bytes32" },
+      { "name": "data", "type": "uint256" }
+    ],
+    "name": "file",
+    "outputs": [],
+    "payable": false,
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "constant": false,
+    "inputs": [
+      { "name": "who", "type": "address" },
+      { "name": "to", "type": "address" }
+    ],
     "name": "rely",
     "outputs": [],
     "payable": false,
@@ -62,7 +77,10 @@
   },
   {
     "constant": false,
-    "inputs": [{ "name": "", "type": "address" }],
+    "inputs": [
+      { "name": "who", "type": "address" },
+      { "name": "to", "type": "address" }
+    ],
     "name": "deny",
     "outputs": [],
     "payable": false,
@@ -72,8 +90,9 @@
   {
     "constant": false,
     "inputs": [
-      { "name": "", "type": "bytes32" },
-      { "name": "", "type": "address" }
+      { "name": "who", "type": "address" },
+      { "name": "what", "type": "bytes32" },
+      { "name": "data", "type": "address" }
     ],
     "name": "file",
     "outputs": [],
@@ -84,8 +103,8 @@
   {
     "constant": false,
     "inputs": [
-      { "name": "", "type": "bytes32" },
-      { "name": "", "type": "bytes32" }
+      { "name": "who", "type": "address" },
+      { "name": "data", "type": "uint256" }
     ],
     "name": "file",
     "outputs": [],
@@ -96,9 +115,10 @@
   {
     "constant": false,
     "inputs": [
-      { "name": "", "type": "bytes32" },
-      { "name": "", "type": "bytes32" },
-      { "name": "", "type": "address" }
+      { "name": "who", "type": "address" },
+      { "name": "ilk", "type": "bytes32" },
+      { "name": "what", "type": "bytes32" },
+      { "name": "data", "type": "uint256" }
     ],
     "name": "file",
     "outputs": [],

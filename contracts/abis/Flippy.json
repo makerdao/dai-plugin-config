@@ -1,17 +1,8 @@
 [
   {
     "constant": false,
-    "inputs": [],
-    "name": "gem",
-    "outputs": [{ "name": "", "type": "address" }],
-    "payable": false,
-    "stateMutability": "nonpayable",
-    "type": "function"
-  },
-  {
-    "constant": false,
     "inputs": [
-      { "name": "urn", "type": "bytes32" },
+      { "name": "urn", "type": "address" },
       { "name": "gal", "type": "address" },
       { "name": "tab", "type": "uint256" },
       { "name": "lot", "type": "uint256" },

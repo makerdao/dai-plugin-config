@@ -1,0 +1,11 @@
+[
+  {
+    "constant": false,
+    "inputs": [{ "name": "gem", "type": "address" }],
+    "name": "burn",
+    "outputs": [],
+    "payable": false,
+    "stateMutability": "nonpayable",
+    "type": "function"
+  }
+]

@@ -21,6 +21,19 @@
     "type": "function"
   },
   {
+    "constant": false,
+    "inputs": [
+      { "name": "urn", "type": "address" },
+      { "name": "guy", "type": "address" },
+      { "name": "wad", "type": "uint256" }
+    ],
+    "name": "exit",
+    "outputs": [],
+    "payable": false,
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
     "constant": true,
     "inputs": [],
     "name": "gem",
@@ -39,18 +52,6 @@
     "type": "function"
   },
   {
-    "constant": false,
-    "inputs": [
-      { "name": "usr", "type": "address" },
-      { "name": "wad", "type": "uint256" }
-    ],
-    "name": "exit",
-    "outputs": [],
-    "payable": false,
-    "stateMutability": "nonpayable",
-    "type": "function"
-  },
-  {
     "inputs": [
       { "name": "vat_", "type": "address" },
       { "name": "ilk_", "type": "bytes32" },
@@ -63,11 +64,12 @@
   {
     "anonymous": true,
     "inputs": [
-      { "indexed": true, "name": "hash", "type": "bytes4" },
-      { "indexed": true, "name": "user", "type": "address" },
-      { "indexed": true, "name": "arg1", "type": "bytes32" },
-      { "indexed": true, "name": "arg2", "type": "bytes32" },
-      { "indexed": false, "name": "data", "type": "bytes" }
+      { "indexed": true, "name": "sig", "type": "bytes4" },
+      { "indexed": true, "name": "guy", "type": "address" },
+      { "indexed": true, "name": "foo", "type": "bytes32" },
+      { "indexed": true, "name": "bar", "type": "bytes32" },
+      { "indexed": false, "name": "wad", "type": "uint256" },
+      { "indexed": false, "name": "fax", "type": "bytes" }
     ],
     "name": "LogNote",
     "type": "event"

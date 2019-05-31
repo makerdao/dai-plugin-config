@@ -1,8 +1,8 @@
 [
   {
     "constant": true,
-    "inputs": [],
-    "name": "Awe",
+    "inputs": [{ "name": "", "type": "address" }],
+    "name": "pie",
     "outputs": [{ "name": "", "type": "uint256" }],
     "payable": false,
     "stateMutability": "view",
@@ -11,34 +11,20 @@
   {
     "constant": true,
     "inputs": [],
-    "name": "Joy",
-    "outputs": [{ "name": "", "type": "uint256" }],
+    "name": "rho",
+    "outputs": [{ "name": "", "type": "uint48" }],
     "payable": false,
     "stateMutability": "view",
     "type": "function"
   },
   {
     "constant": false,
-    "inputs": [],
-    "name": "flap",
-    "outputs": [{ "name": "id", "type": "uint256" }],
-    "payable": false,
-    "stateMutability": "nonpayable",
-    "type": "function"
-  },
-  {
-    "constant": true,
-    "inputs": [],
-    "name": "hump",
-    "outputs": [{ "name": "", "type": "uint256" }],
-    "payable": false,
-    "stateMutability": "view",
-    "type": "function"
-  },
-  {
-    "constant": false,
-    "inputs": [{ "name": "rad", "type": "uint256" }],
-    "name": "kiss",
+    "inputs": [
+      { "name": "src", "type": "address" },
+      { "name": "dst", "type": "address" },
+      { "name": "wad", "type": "int256" }
+    ],
+    "name": "move",
     "outputs": [],
     "payable": false,
     "stateMutability": "nonpayable",
@@ -59,19 +45,10 @@
   {
     "constant": true,
     "inputs": [],
-    "name": "Ash",
+    "name": "Pie",
     "outputs": [{ "name": "", "type": "uint256" }],
     "payable": false,
     "stateMutability": "view",
-    "type": "function"
-  },
-  {
-    "constant": false,
-    "inputs": [{ "name": "era", "type": "uint48" }],
-    "name": "flog",
-    "outputs": [],
-    "payable": false,
-    "stateMutability": "nonpayable",
     "type": "function"
   },
   {
@@ -86,7 +63,7 @@
   {
     "constant": true,
     "inputs": [],
-    "name": "Woe",
+    "name": "dsr",
     "outputs": [{ "name": "", "type": "uint256" }],
     "payable": false,
     "stateMutability": "view",
@@ -95,15 +72,15 @@
   {
     "constant": true,
     "inputs": [],
-    "name": "wait",
-    "outputs": [{ "name": "", "type": "uint256" }],
+    "name": "vow",
+    "outputs": [{ "name": "", "type": "address" }],
     "payable": false,
     "stateMutability": "view",
     "type": "function"
   },
   {
     "constant": false,
-    "inputs": [{ "name": "usr", "type": "address" }],
+    "inputs": [{ "name": "guy", "type": "address" }],
     "name": "rely",
     "outputs": [],
     "payable": false,
@@ -111,44 +88,17 @@
     "type": "function"
   },
   {
-    "constant": true,
-    "inputs": [],
-    "name": "bump",
-    "outputs": [{ "name": "", "type": "uint256" }],
-    "payable": false,
-    "stateMutability": "view",
-    "type": "function"
-  },
-  {
     "constant": false,
-    "inputs": [{ "name": "tab", "type": "uint256" }],
-    "name": "fess",
+    "inputs": [{ "name": "wad", "type": "int256" }],
+    "name": "save",
     "outputs": [],
     "payable": false,
     "stateMutability": "nonpayable",
     "type": "function"
   },
   {
-    "constant": true,
-    "inputs": [],
-    "name": "row",
-    "outputs": [{ "name": "", "type": "address" }],
-    "payable": false,
-    "stateMutability": "view",
-    "type": "function"
-  },
-  {
-    "constant": true,
-    "inputs": [{ "name": "", "type": "uint48" }],
-    "name": "sin",
-    "outputs": [{ "name": "", "type": "uint256" }],
-    "payable": false,
-    "stateMutability": "view",
-    "type": "function"
-  },
-  {
     "constant": false,
-    "inputs": [{ "name": "usr", "type": "address" }],
+    "inputs": [{ "name": "guy", "type": "address" }],
     "name": "deny",
     "outputs": [],
     "payable": false,
@@ -158,8 +108,8 @@
   {
     "constant": false,
     "inputs": [],
-    "name": "flop",
-    "outputs": [{ "name": "id", "type": "uint256" }],
+    "name": "drip",
+    "outputs": [],
     "payable": false,
     "stateMutability": "nonpayable",
     "type": "function"
@@ -176,16 +126,7 @@
   {
     "constant": true,
     "inputs": [],
-    "name": "sump",
-    "outputs": [{ "name": "", "type": "uint256" }],
-    "payable": false,
-    "stateMutability": "view",
-    "type": "function"
-  },
-  {
-    "constant": true,
-    "inputs": [],
-    "name": "Sin",
+    "name": "chi",
     "outputs": [{ "name": "", "type": "uint256" }],
     "payable": false,
     "stateMutability": "view",
@@ -204,25 +145,7 @@
     "type": "function"
   },
   {
-    "constant": true,
-    "inputs": [],
-    "name": "cow",
-    "outputs": [{ "name": "", "type": "address" }],
-    "payable": false,
-    "stateMutability": "view",
-    "type": "function"
-  },
-  {
-    "constant": false,
-    "inputs": [{ "name": "rad", "type": "uint256" }],
-    "name": "heal",
-    "outputs": [],
-    "payable": false,
-    "stateMutability": "nonpayable",
-    "type": "function"
-  },
-  {
-    "inputs": [],
+    "inputs": [{ "name": "vat_", "type": "address" }],
     "payable": false,
     "stateMutability": "nonpayable",
     "type": "constructor"
@@ -230,11 +153,12 @@
   {
     "anonymous": true,
     "inputs": [
-      { "indexed": true, "name": "hash", "type": "bytes4" },
-      { "indexed": true, "name": "user", "type": "address" },
-      { "indexed": true, "name": "arg1", "type": "bytes32" },
-      { "indexed": true, "name": "arg2", "type": "bytes32" },
-      { "indexed": false, "name": "data", "type": "bytes" }
+      { "indexed": true, "name": "sig", "type": "bytes4" },
+      { "indexed": true, "name": "guy", "type": "address" },
+      { "indexed": true, "name": "foo", "type": "bytes32" },
+      { "indexed": true, "name": "bar", "type": "bytes32" },
+      { "indexed": false, "name": "wad", "type": "uint256" },
+      { "indexed": false, "name": "fax", "type": "bytes" }
     ],
     "name": "LogNote",
     "type": "event"

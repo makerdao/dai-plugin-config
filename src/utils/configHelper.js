@@ -3,12 +3,31 @@ import tokens from '../../contracts/tokens.json';
 import { createCurrency } from '@makerdao/currency';
 
 export const formatContracts = deployedContracts => {
-  const addContracts = Object.keys(deployedContracts).reduce((result, key) => {
-    result[key] = { address: { testnet: deployedContracts[key] } };
-    if (abiMap[key])
-      result[key].abi = require(`../../contracts/abis/${abiMap[key]}.json`);
-    return result;
-  }, {});
+  const addContracts = Object.keys(deployedContracts).reduce(
+    (result, contractName) => {
+      result[contractName] = {
+        address: { testnet: deployedContracts[contractName] }
+      };
+      if (abiMap[contractName]) {
+        result[contractName].abi = require(`../../contracts/abis/${
+          abiMap[contractName]
+        }.json`);
+      } else {
+        const prefix = Object.keys(abiMap).find(
+          k =>
+            k.substring(k.length - 1) == '*' &&
+            k.substring(0, k.length - 1) ==
+              contractName.substring(0, k.length - 1)
+        );
+        if (prefix)
+          result[contractName].abi = require(`../../contracts/abis/${
+            abiMap[prefix]
+          }.json`);
+      }
+      return result;
+    },
+    {}
+  );
 
   // These MCD contracts are also required for SCD
   if (addContracts['MCD_ADM']) addContracts.CHIEF = addContracts['MCD_ADM'];

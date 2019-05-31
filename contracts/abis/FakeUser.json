@@ -17,9 +17,10 @@
     "constant": false,
     "inputs": [
       { "name": "obj", "type": "address" },
-      { "name": "id", "type": "uint256" }
+      { "name": "urn", "type": "address" },
+      { "name": "wad", "type": "uint256" }
     ],
-    "name": "doDeal",
+    "name": "doDaiJoin",
     "outputs": [],
     "payable": false,
     "stateMutability": "nonpayable",
@@ -29,10 +30,9 @@
     "constant": false,
     "inputs": [
       { "name": "obj", "type": "address" },
-      { "name": "addr", "type": "bytes32" },
-      { "name": "wad", "type": "uint256" }
+      { "name": "id", "type": "uint256" }
     ],
-    "name": "doEthJoin",
+    "name": "doDeal",
     "outputs": [],
     "payable": false,
     "stateMutability": "nonpayable",
@@ -46,6 +46,20 @@
       { "name": "wad", "type": "uint256" }
     ],
     "name": "doDaiExit",
+    "outputs": [],
+    "payable": false,
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "constant": false,
+    "inputs": [
+      { "name": "obj", "type": "address" },
+      { "name": "gem", "type": "address" },
+      { "name": "urn", "type": "address" },
+      { "name": "wad", "type": "uint256" }
+    ],
+    "name": "doEthJoin",
     "outputs": [],
     "payable": false,
     "stateMutability": "nonpayable",
@@ -69,10 +83,13 @@
     "constant": false,
     "inputs": [
       { "name": "obj", "type": "address" },
-      { "name": "urn", "type": "bytes32" },
-      { "name": "wad", "type": "uint256" }
+      { "name": "ilk", "type": "bytes32" },
+      { "name": "src", "type": "address" },
+      { "name": "dst", "type": "address" },
+      { "name": "dink", "type": "int256" },
+      { "name": "dart", "type": "int256" }
     ],
-    "name": "doDaiJoin",
+    "name": "doFork",
     "outputs": [],
     "payable": false,
     "stateMutability": "nonpayable",
@@ -83,6 +100,9 @@
     "inputs": [
       { "name": "obj", "type": "address" },
       { "name": "ilk", "type": "bytes32" },
+      { "name": "urn", "type": "address" },
+      { "name": "gem", "type": "address" },
+      { "name": "dai", "type": "address" },
       { "name": "dink", "type": "int256" },
       { "name": "dart", "type": "int256" }
     ],
