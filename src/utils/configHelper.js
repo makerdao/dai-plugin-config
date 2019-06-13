@@ -43,12 +43,13 @@ export const formatContracts = deployedContracts => {
 export const mapTokens = contracts => {
   return Object.keys(tokens).reduce((result, key) => {
     if (contracts[key]) {
-      const name = tokens[key];
-      let currency = createCurrency(name);
+      let currency = createCurrency(tokens[key].name);
       result.push({
         currency,
         symbol: currency.symbol,
-        address: contracts[key].address.testnet
+        address: contracts[key].address.testnet,
+        abi: contracts[key].abi,
+        decimals: tokens[key].decimals || 18
       });
     }
     return result;
