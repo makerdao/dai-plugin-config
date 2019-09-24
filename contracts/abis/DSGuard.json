@@ -1,7 +1,9 @@
 [
   {
     "constant": false,
-    "inputs": [{ "name": "owner_", "type": "address" }],
+    "inputs": [
+      { "internalType": "address", "name": "owner_", "type": "address" }
+    ],
     "name": "setOwner",
     "outputs": [],
     "payable": false,
@@ -11,9 +13,9 @@
   {
     "constant": false,
     "inputs": [
-      { "name": "src", "type": "address" },
-      { "name": "dst", "type": "address" },
-      { "name": "sig", "type": "bytes32" }
+      { "internalType": "address", "name": "src", "type": "address" },
+      { "internalType": "address", "name": "dst", "type": "address" },
+      { "internalType": "bytes32", "name": "sig", "type": "bytes32" }
     ],
     "name": "forbid",
     "outputs": [],
@@ -24,9 +26,9 @@
   {
     "constant": false,
     "inputs": [
-      { "name": "src", "type": "bytes32" },
-      { "name": "dst", "type": "bytes32" },
-      { "name": "sig", "type": "bytes32" }
+      { "internalType": "bytes32", "name": "src", "type": "bytes32" },
+      { "internalType": "bytes32", "name": "dst", "type": "bytes32" },
+      { "internalType": "bytes32", "name": "sig", "type": "bytes32" }
     ],
     "name": "forbid",
     "outputs": [],
@@ -36,7 +38,13 @@
   },
   {
     "constant": false,
-    "inputs": [{ "name": "authority_", "type": "address" }],
+    "inputs": [
+      {
+        "internalType": "contract DSAuthority",
+        "name": "authority_",
+        "type": "address"
+      }
+    ],
     "name": "setAuthority",
     "outputs": [],
     "payable": false,
@@ -47,7 +55,7 @@
     "constant": true,
     "inputs": [],
     "name": "owner",
-    "outputs": [{ "name": "", "type": "address" }],
+    "outputs": [{ "internalType": "address", "name": "", "type": "address" }],
     "payable": false,
     "stateMutability": "view",
     "type": "function"
@@ -56,7 +64,7 @@
     "constant": true,
     "inputs": [],
     "name": "ANY",
-    "outputs": [{ "name": "", "type": "bytes32" }],
+    "outputs": [{ "internalType": "bytes32", "name": "", "type": "bytes32" }],
     "payable": false,
     "stateMutability": "view",
     "type": "function"
@@ -64,12 +72,12 @@
   {
     "constant": true,
     "inputs": [
-      { "name": "src_", "type": "address" },
-      { "name": "dst_", "type": "address" },
-      { "name": "sig", "type": "bytes4" }
+      { "internalType": "address", "name": "src_", "type": "address" },
+      { "internalType": "address", "name": "dst_", "type": "address" },
+      { "internalType": "bytes4", "name": "sig", "type": "bytes4" }
     ],
     "name": "canCall",
-    "outputs": [{ "name": "", "type": "bool" }],
+    "outputs": [{ "internalType": "bool", "name": "", "type": "bool" }],
     "payable": false,
     "stateMutability": "view",
     "type": "function"
@@ -78,7 +86,9 @@
     "constant": true,
     "inputs": [],
     "name": "authority",
-    "outputs": [{ "name": "", "type": "address" }],
+    "outputs": [
+      { "internalType": "contract DSAuthority", "name": "", "type": "address" }
+    ],
     "payable": false,
     "stateMutability": "view",
     "type": "function"
@@ -86,9 +96,9 @@
   {
     "constant": false,
     "inputs": [
-      { "name": "src", "type": "address" },
-      { "name": "dst", "type": "address" },
-      { "name": "sig", "type": "bytes32" }
+      { "internalType": "address", "name": "src", "type": "address" },
+      { "internalType": "address", "name": "dst", "type": "address" },
+      { "internalType": "bytes32", "name": "sig", "type": "bytes32" }
     ],
     "name": "permit",
     "outputs": [],
@@ -99,9 +109,9 @@
   {
     "constant": false,
     "inputs": [
-      { "name": "src", "type": "bytes32" },
-      { "name": "dst", "type": "bytes32" },
-      { "name": "sig", "type": "bytes32" }
+      { "internalType": "bytes32", "name": "src", "type": "bytes32" },
+      { "internalType": "bytes32", "name": "dst", "type": "bytes32" },
+      { "internalType": "bytes32", "name": "sig", "type": "bytes32" }
     ],
     "name": "permit",
     "outputs": [],
@@ -112,9 +122,24 @@
   {
     "anonymous": false,
     "inputs": [
-      { "indexed": true, "name": "src", "type": "bytes32" },
-      { "indexed": true, "name": "dst", "type": "bytes32" },
-      { "indexed": true, "name": "sig", "type": "bytes32" }
+      {
+        "indexed": true,
+        "internalType": "bytes32",
+        "name": "src",
+        "type": "bytes32"
+      },
+      {
+        "indexed": true,
+        "internalType": "bytes32",
+        "name": "dst",
+        "type": "bytes32"
+      },
+      {
+        "indexed": true,
+        "internalType": "bytes32",
+        "name": "sig",
+        "type": "bytes32"
+      }
     ],
     "name": "LogPermit",
     "type": "event"
@@ -122,22 +147,51 @@
   {
     "anonymous": false,
     "inputs": [
-      { "indexed": true, "name": "src", "type": "bytes32" },
-      { "indexed": true, "name": "dst", "type": "bytes32" },
-      { "indexed": true, "name": "sig", "type": "bytes32" }
+      {
+        "indexed": true,
+        "internalType": "bytes32",
+        "name": "src",
+        "type": "bytes32"
+      },
+      {
+        "indexed": true,
+        "internalType": "bytes32",
+        "name": "dst",
+        "type": "bytes32"
+      },
+      {
+        "indexed": true,
+        "internalType": "bytes32",
+        "name": "sig",
+        "type": "bytes32"
+      }
     ],
     "name": "LogForbid",
     "type": "event"
   },
   {
     "anonymous": false,
-    "inputs": [{ "indexed": true, "name": "authority", "type": "address" }],
+    "inputs": [
+      {
+        "indexed": true,
+        "internalType": "address",
+        "name": "authority",
+        "type": "address"
+      }
+    ],
     "name": "LogSetAuthority",
     "type": "event"
   },
   {
     "anonymous": false,
-    "inputs": [{ "indexed": true, "name": "owner", "type": "address" }],
+    "inputs": [
+      {
+        "indexed": true,
+        "internalType": "address",
+        "name": "owner",
+        "type": "address"
+      }
+    ],
     "name": "LogSetOwner",
     "type": "event"
   }

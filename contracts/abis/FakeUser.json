@@ -2,10 +2,23 @@
   {
     "constant": false,
     "inputs": [
-      { "name": "obj", "type": "address" },
-      { "name": "id", "type": "uint256" },
-      { "name": "lot", "type": "uint256" },
-      { "name": "bid", "type": "uint256" }
+      { "internalType": "address", "name": "gem", "type": "address" },
+      { "internalType": "address", "name": "esm", "type": "address" },
+      { "internalType": "uint256", "name": "wad", "type": "uint256" }
+    ],
+    "name": "doESMJoin",
+    "outputs": [],
+    "payable": false,
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "constant": false,
+    "inputs": [
+      { "internalType": "address", "name": "obj", "type": "address" },
+      { "internalType": "uint256", "name": "id", "type": "uint256" },
+      { "internalType": "uint256", "name": "lot", "type": "uint256" },
+      { "internalType": "uint256", "name": "bid", "type": "uint256" }
     ],
     "name": "doTend",
     "outputs": [],
@@ -16,9 +29,9 @@
   {
     "constant": false,
     "inputs": [
-      { "name": "obj", "type": "address" },
-      { "name": "urn", "type": "address" },
-      { "name": "wad", "type": "uint256" }
+      { "internalType": "address", "name": "obj", "type": "address" },
+      { "internalType": "address", "name": "urn", "type": "address" },
+      { "internalType": "uint256", "name": "wad", "type": "uint256" }
     ],
     "name": "doDaiJoin",
     "outputs": [],
@@ -29,8 +42,8 @@
   {
     "constant": false,
     "inputs": [
-      { "name": "obj", "type": "address" },
-      { "name": "id", "type": "uint256" }
+      { "internalType": "address", "name": "obj", "type": "address" },
+      { "internalType": "uint256", "name": "id", "type": "uint256" }
     ],
     "name": "doDeal",
     "outputs": [],
@@ -41,9 +54,9 @@
   {
     "constant": false,
     "inputs": [
-      { "name": "obj", "type": "address" },
-      { "name": "guy", "type": "address" },
-      { "name": "wad", "type": "uint256" }
+      { "internalType": "address", "name": "obj", "type": "address" },
+      { "internalType": "address", "name": "guy", "type": "address" },
+      { "internalType": "uint256", "name": "wad", "type": "uint256" }
     ],
     "name": "doDaiExit",
     "outputs": [],
@@ -54,10 +67,10 @@
   {
     "constant": false,
     "inputs": [
-      { "name": "obj", "type": "address" },
-      { "name": "gem", "type": "address" },
-      { "name": "urn", "type": "address" },
-      { "name": "wad", "type": "uint256" }
+      { "internalType": "address payable", "name": "obj", "type": "address" },
+      { "internalType": "address", "name": "gem", "type": "address" },
+      { "internalType": "address", "name": "urn", "type": "address" },
+      { "internalType": "uint256", "name": "wad", "type": "uint256" }
     ],
     "name": "doEthJoin",
     "outputs": [],
@@ -68,10 +81,10 @@
   {
     "constant": false,
     "inputs": [
-      { "name": "obj", "type": "address" },
-      { "name": "id", "type": "uint256" },
-      { "name": "lot", "type": "uint256" },
-      { "name": "bid", "type": "uint256" }
+      { "internalType": "address", "name": "obj", "type": "address" },
+      { "internalType": "uint256", "name": "id", "type": "uint256" },
+      { "internalType": "uint256", "name": "lot", "type": "uint256" },
+      { "internalType": "uint256", "name": "bid", "type": "uint256" }
     ],
     "name": "doDent",
     "outputs": [],
@@ -82,12 +95,12 @@
   {
     "constant": false,
     "inputs": [
-      { "name": "obj", "type": "address" },
-      { "name": "ilk", "type": "bytes32" },
-      { "name": "src", "type": "address" },
-      { "name": "dst", "type": "address" },
-      { "name": "dink", "type": "int256" },
-      { "name": "dart", "type": "int256" }
+      { "internalType": "address", "name": "obj", "type": "address" },
+      { "internalType": "bytes32", "name": "ilk", "type": "bytes32" },
+      { "internalType": "address", "name": "src", "type": "address" },
+      { "internalType": "address", "name": "dst", "type": "address" },
+      { "internalType": "int256", "name": "dink", "type": "int256" },
+      { "internalType": "int256", "name": "dart", "type": "int256" }
     ],
     "name": "doFork",
     "outputs": [],
@@ -98,13 +111,25 @@
   {
     "constant": false,
     "inputs": [
-      { "name": "obj", "type": "address" },
-      { "name": "ilk", "type": "bytes32" },
-      { "name": "urn", "type": "address" },
-      { "name": "gem", "type": "address" },
-      { "name": "dai", "type": "address" },
-      { "name": "dink", "type": "int256" },
-      { "name": "dart", "type": "int256" }
+      { "internalType": "address", "name": "end", "type": "address" },
+      { "internalType": "bytes32", "name": "ilk", "type": "bytes32" }
+    ],
+    "name": "doEndFree",
+    "outputs": [],
+    "payable": false,
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "constant": false,
+    "inputs": [
+      { "internalType": "address", "name": "obj", "type": "address" },
+      { "internalType": "bytes32", "name": "ilk", "type": "bytes32" },
+      { "internalType": "address", "name": "urn", "type": "address" },
+      { "internalType": "address", "name": "gem", "type": "address" },
+      { "internalType": "address", "name": "dai", "type": "address" },
+      { "internalType": "int256", "name": "dink", "type": "int256" },
+      { "internalType": "int256", "name": "dart", "type": "int256" }
     ],
     "name": "doFrob",
     "outputs": [],
@@ -115,8 +140,8 @@
   {
     "constant": false,
     "inputs": [
-      { "name": "token", "type": "address" },
-      { "name": "guy", "type": "address" }
+      { "internalType": "address", "name": "token", "type": "address" },
+      { "internalType": "address", "name": "guy", "type": "address" }
     ],
     "name": "doApprove",
     "outputs": [],
@@ -127,8 +152,8 @@
   {
     "constant": false,
     "inputs": [
-      { "name": "obj", "type": "address" },
-      { "name": "guy", "type": "address" }
+      { "internalType": "address", "name": "obj", "type": "address" },
+      { "internalType": "address", "name": "guy", "type": "address" }
     ],
     "name": "doHope",
     "outputs": [],

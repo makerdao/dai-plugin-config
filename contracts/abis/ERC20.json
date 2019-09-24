@@ -2,11 +2,11 @@
   {
     "constant": false,
     "inputs": [
-      { "name": "guy", "type": "address" },
-      { "name": "wad", "type": "uint256" }
+      { "internalType": "address", "name": "guy", "type": "address" },
+      { "internalType": "uint256", "name": "wad", "type": "uint256" }
     ],
     "name": "approve",
-    "outputs": [{ "name": "", "type": "bool" }],
+    "outputs": [{ "internalType": "bool", "name": "", "type": "bool" }],
     "payable": false,
     "stateMutability": "nonpayable",
     "type": "function"
@@ -15,7 +15,7 @@
     "constant": true,
     "inputs": [],
     "name": "totalSupply",
-    "outputs": [{ "name": "", "type": "uint256" }],
+    "outputs": [{ "internalType": "uint256", "name": "", "type": "uint256" }],
     "payable": false,
     "stateMutability": "view",
     "type": "function"
@@ -23,21 +23,21 @@
   {
     "constant": false,
     "inputs": [
-      { "name": "src", "type": "address" },
-      { "name": "dst", "type": "address" },
-      { "name": "wad", "type": "uint256" }
+      { "internalType": "address", "name": "src", "type": "address" },
+      { "internalType": "address", "name": "dst", "type": "address" },
+      { "internalType": "uint256", "name": "wad", "type": "uint256" }
     ],
     "name": "transferFrom",
-    "outputs": [{ "name": "", "type": "bool" }],
+    "outputs": [{ "internalType": "bool", "name": "", "type": "bool" }],
     "payable": false,
     "stateMutability": "nonpayable",
     "type": "function"
   },
   {
     "constant": true,
-    "inputs": [{ "name": "guy", "type": "address" }],
+    "inputs": [{ "internalType": "address", "name": "guy", "type": "address" }],
     "name": "balanceOf",
-    "outputs": [{ "name": "", "type": "uint256" }],
+    "outputs": [{ "internalType": "uint256", "name": "", "type": "uint256" }],
     "payable": false,
     "stateMutability": "view",
     "type": "function"
@@ -45,11 +45,11 @@
   {
     "constant": false,
     "inputs": [
-      { "name": "dst", "type": "address" },
-      { "name": "wad", "type": "uint256" }
+      { "internalType": "address", "name": "dst", "type": "address" },
+      { "internalType": "uint256", "name": "wad", "type": "uint256" }
     ],
     "name": "transfer",
-    "outputs": [{ "name": "", "type": "bool" }],
+    "outputs": [{ "internalType": "bool", "name": "", "type": "bool" }],
     "payable": false,
     "stateMutability": "nonpayable",
     "type": "function"
@@ -57,11 +57,11 @@
   {
     "constant": true,
     "inputs": [
-      { "name": "src", "type": "address" },
-      { "name": "guy", "type": "address" }
+      { "internalType": "address", "name": "src", "type": "address" },
+      { "internalType": "address", "name": "guy", "type": "address" }
     ],
     "name": "allowance",
-    "outputs": [{ "name": "", "type": "uint256" }],
+    "outputs": [{ "internalType": "uint256", "name": "", "type": "uint256" }],
     "payable": false,
     "stateMutability": "view",
     "type": "function"
@@ -69,9 +69,24 @@
   {
     "anonymous": false,
     "inputs": [
-      { "indexed": true, "name": "src", "type": "address" },
-      { "indexed": true, "name": "guy", "type": "address" },
-      { "indexed": false, "name": "wad", "type": "uint256" }
+      {
+        "indexed": true,
+        "internalType": "address",
+        "name": "src",
+        "type": "address"
+      },
+      {
+        "indexed": true,
+        "internalType": "address",
+        "name": "guy",
+        "type": "address"
+      },
+      {
+        "indexed": false,
+        "internalType": "uint256",
+        "name": "wad",
+        "type": "uint256"
+      }
     ],
     "name": "Approval",
     "type": "event"
@@ -79,9 +94,24 @@
   {
     "anonymous": false,
     "inputs": [
-      { "indexed": true, "name": "src", "type": "address" },
-      { "indexed": true, "name": "dst", "type": "address" },
-      { "indexed": false, "name": "wad", "type": "uint256" }
+      {
+        "indexed": true,
+        "internalType": "address",
+        "name": "src",
+        "type": "address"
+      },
+      {
+        "indexed": true,
+        "internalType": "address",
+        "name": "dst",
+        "type": "address"
+      },
+      {
+        "indexed": false,
+        "internalType": "uint256",
+        "name": "wad",
+        "type": "uint256"
+      }
     ],
     "name": "Transfer",
     "type": "event"

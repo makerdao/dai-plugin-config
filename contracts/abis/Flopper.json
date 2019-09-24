@@ -1,5 +1,35 @@
 [
   {
+    "constant": false,
+    "inputs": [{ "name": "id", "type": "uint256" }],
+    "name": "yank",
+    "outputs": [],
+    "payable": false,
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "constant": false,
+    "inputs": [
+      { "name": "what", "type": "bytes32" },
+      { "name": "data", "type": "uint256" }
+    ],
+    "name": "file",
+    "outputs": [],
+    "payable": false,
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "constant": true,
+    "inputs": [],
+    "name": "vat",
+    "outputs": [{ "name": "", "type": "address" }],
+    "payable": false,
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
     "constant": true,
     "inputs": [{ "name": "", "type": "uint256" }],
     "name": "bids",
@@ -8,8 +38,7 @@
       { "name": "lot", "type": "uint256" },
       { "name": "guy", "type": "address" },
       { "name": "tic", "type": "uint48" },
-      { "name": "end", "type": "uint48" },
-      { "name": "vow", "type": "address" }
+      { "name": "end", "type": "uint48" }
     ],
     "payable": false,
     "stateMutability": "view",
@@ -47,6 +76,15 @@
     "type": "function"
   },
   {
+    "constant": false,
+    "inputs": [],
+    "name": "cage",
+    "outputs": [],
+    "payable": false,
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
     "constant": true,
     "inputs": [],
     "name": "gem",
@@ -59,6 +97,15 @@
     "constant": true,
     "inputs": [],
     "name": "beg",
+    "outputs": [{ "name": "", "type": "uint256" }],
+    "payable": false,
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "constant": true,
+    "inputs": [],
+    "name": "live",
     "outputs": [{ "name": "", "type": "uint256" }],
     "payable": false,
     "stateMutability": "view",
@@ -123,17 +170,8 @@
     "type": "function"
   },
   {
-    "constant": true,
-    "inputs": [],
-    "name": "dai",
-    "outputs": [{ "name": "", "type": "address" }],
-    "payable": false,
-    "stateMutability": "view",
-    "type": "function"
-  },
-  {
     "inputs": [
-      { "name": "dai_", "type": "address" },
+      { "name": "vat_", "type": "address" },
       { "name": "gem_", "type": "address" }
     ],
     "payable": false,
@@ -154,8 +192,8 @@
   {
     "anonymous": true,
     "inputs": [
-      { "indexed": true, "name": "hash", "type": "bytes4" },
-      { "indexed": true, "name": "user", "type": "address" },
+      { "indexed": true, "name": "sig", "type": "bytes4" },
+      { "indexed": true, "name": "usr", "type": "address" },
       { "indexed": true, "name": "arg1", "type": "bytes32" },
       { "indexed": true, "name": "arg2", "type": "bytes32" },
       { "indexed": false, "name": "data", "type": "bytes" }

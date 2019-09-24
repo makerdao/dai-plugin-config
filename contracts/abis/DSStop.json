@@ -10,7 +10,9 @@
   },
   {
     "constant": false,
-    "inputs": [{ "name": "owner_", "type": "address" }],
+    "inputs": [
+      { "internalType": "address", "name": "owner_", "type": "address" }
+    ],
     "name": "setOwner",
     "outputs": [],
     "payable": false,
@@ -21,14 +23,20 @@
     "constant": true,
     "inputs": [],
     "name": "stopped",
-    "outputs": [{ "name": "", "type": "bool" }],
+    "outputs": [{ "internalType": "bool", "name": "", "type": "bool" }],
     "payable": false,
     "stateMutability": "view",
     "type": "function"
   },
   {
     "constant": false,
-    "inputs": [{ "name": "authority_", "type": "address" }],
+    "inputs": [
+      {
+        "internalType": "contract DSAuthority",
+        "name": "authority_",
+        "type": "address"
+      }
+    ],
     "name": "setAuthority",
     "outputs": [],
     "payable": false,
@@ -39,7 +47,7 @@
     "constant": true,
     "inputs": [],
     "name": "owner",
-    "outputs": [{ "name": "", "type": "address" }],
+    "outputs": [{ "internalType": "address", "name": "", "type": "address" }],
     "payable": false,
     "stateMutability": "view",
     "type": "function"
@@ -57,32 +65,78 @@
     "constant": true,
     "inputs": [],
     "name": "authority",
-    "outputs": [{ "name": "", "type": "address" }],
+    "outputs": [
+      { "internalType": "contract DSAuthority", "name": "", "type": "address" }
+    ],
     "payable": false,
     "stateMutability": "view",
     "type": "function"
   },
   {
     "anonymous": false,
-    "inputs": [{ "indexed": true, "name": "authority", "type": "address" }],
+    "inputs": [
+      {
+        "indexed": true,
+        "internalType": "address",
+        "name": "authority",
+        "type": "address"
+      }
+    ],
     "name": "LogSetAuthority",
     "type": "event"
   },
   {
     "anonymous": false,
-    "inputs": [{ "indexed": true, "name": "owner", "type": "address" }],
+    "inputs": [
+      {
+        "indexed": true,
+        "internalType": "address",
+        "name": "owner",
+        "type": "address"
+      }
+    ],
     "name": "LogSetOwner",
     "type": "event"
   },
   {
     "anonymous": true,
     "inputs": [
-      { "indexed": true, "name": "sig", "type": "bytes4" },
-      { "indexed": true, "name": "guy", "type": "address" },
-      { "indexed": true, "name": "foo", "type": "bytes32" },
-      { "indexed": true, "name": "bar", "type": "bytes32" },
-      { "indexed": false, "name": "wad", "type": "uint256" },
-      { "indexed": false, "name": "fax", "type": "bytes" }
+      {
+        "indexed": true,
+        "internalType": "bytes4",
+        "name": "sig",
+        "type": "bytes4"
+      },
+      {
+        "indexed": true,
+        "internalType": "address",
+        "name": "guy",
+        "type": "address"
+      },
+      {
+        "indexed": true,
+        "internalType": "bytes32",
+        "name": "foo",
+        "type": "bytes32"
+      },
+      {
+        "indexed": true,
+        "internalType": "bytes32",
+        "name": "bar",
+        "type": "bytes32"
+      },
+      {
+        "indexed": false,
+        "internalType": "uint256",
+        "name": "wad",
+        "type": "uint256"
+      },
+      {
+        "indexed": false,
+        "internalType": "bytes",
+        "name": "fax",
+        "type": "bytes"
+      }
     ],
     "name": "LogNote",
     "type": "event"

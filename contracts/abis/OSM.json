@@ -13,20 +13,11 @@
     "inputs": [],
     "name": "peep",
     "outputs": [
-      { "name": "", "type": "bytes32" },
-      { "name": "", "type": "bool" }
+      { "internalType": "bytes32", "name": "", "type": "bytes32" },
+      { "internalType": "bool", "name": "", "type": "bool" }
     ],
     "payable": false,
     "stateMutability": "view",
-    "type": "function"
-  },
-  {
-    "constant": false,
-    "inputs": [{ "name": "owner_", "type": "address" }],
-    "name": "setOwner",
-    "outputs": [],
-    "payable": false,
-    "stateMutability": "nonpayable",
     "type": "function"
   },
   {
@@ -40,7 +31,9 @@
   },
   {
     "constant": false,
-    "inputs": [{ "name": "src_", "type": "address" }],
+    "inputs": [
+      { "internalType": "address", "name": "src_", "type": "address" }
+    ],
     "name": "change",
     "outputs": [],
     "payable": false,
@@ -51,16 +44,16 @@
     "constant": true,
     "inputs": [],
     "name": "src",
-    "outputs": [{ "name": "", "type": "address" }],
+    "outputs": [{ "internalType": "address", "name": "", "type": "address" }],
     "payable": false,
     "stateMutability": "view",
     "type": "function"
   },
   {
     "constant": true,
-    "inputs": [{ "name": "", "type": "address" }],
+    "inputs": [{ "internalType": "address", "name": "", "type": "address" }],
     "name": "bud",
-    "outputs": [{ "name": "", "type": "bool" }],
+    "outputs": [{ "internalType": "uint256", "name": "", "type": "uint256" }],
     "payable": false,
     "stateMutability": "view",
     "type": "function"
@@ -69,7 +62,7 @@
     "constant": true,
     "inputs": [],
     "name": "read",
-    "outputs": [{ "name": "", "type": "bytes32" }],
+    "outputs": [{ "internalType": "bytes32", "name": "", "type": "bytes32" }],
     "payable": false,
     "stateMutability": "view",
     "type": "function"
@@ -79,8 +72,8 @@
     "inputs": [],
     "name": "peek",
     "outputs": [
-      { "name": "", "type": "bytes32" },
-      { "name": "", "type": "bool" }
+      { "internalType": "bytes32", "name": "", "type": "bytes32" },
+      { "internalType": "bool", "name": "", "type": "bool" }
     ],
     "payable": false,
     "stateMutability": "view",
@@ -88,7 +81,7 @@
   },
   {
     "constant": false,
-    "inputs": [{ "name": "a", "type": "address" }],
+    "inputs": [{ "internalType": "address", "name": "a", "type": "address" }],
     "name": "diss",
     "outputs": [],
     "payable": false,
@@ -97,7 +90,7 @@
   },
   {
     "constant": false,
-    "inputs": [{ "name": "guy", "type": "address" }],
+    "inputs": [{ "internalType": "address", "name": "guy", "type": "address" }],
     "name": "rely",
     "outputs": [],
     "payable": false,
@@ -108,32 +101,14 @@
     "constant": true,
     "inputs": [],
     "name": "stopped",
-    "outputs": [{ "name": "", "type": "bool" }],
+    "outputs": [{ "internalType": "uint256", "name": "", "type": "uint256" }],
     "payable": false,
     "stateMutability": "view",
     "type": "function"
   },
   {
     "constant": false,
-    "inputs": [{ "name": "authority_", "type": "address" }],
-    "name": "setAuthority",
-    "outputs": [],
-    "payable": false,
-    "stateMutability": "nonpayable",
-    "type": "function"
-  },
-  {
-    "constant": true,
-    "inputs": [],
-    "name": "owner",
-    "outputs": [{ "name": "", "type": "address" }],
-    "payable": false,
-    "stateMutability": "view",
-    "type": "function"
-  },
-  {
-    "constant": false,
-    "inputs": [{ "name": "guy", "type": "address" }],
+    "inputs": [{ "internalType": "address", "name": "guy", "type": "address" }],
     "name": "deny",
     "outputs": [],
     "payable": false,
@@ -144,7 +119,7 @@
     "constant": true,
     "inputs": [],
     "name": "zzz",
-    "outputs": [{ "name": "", "type": "uint64" }],
+    "outputs": [{ "internalType": "uint64", "name": "", "type": "uint64" }],
     "payable": false,
     "stateMutability": "view",
     "type": "function"
@@ -153,7 +128,7 @@
     "constant": true,
     "inputs": [],
     "name": "pass",
-    "outputs": [{ "name": "ok", "type": "bool" }],
+    "outputs": [{ "internalType": "bool", "name": "ok", "type": "bool" }],
     "payable": false,
     "stateMutability": "view",
     "type": "function"
@@ -171,7 +146,7 @@
     "constant": true,
     "inputs": [],
     "name": "hop",
-    "outputs": [{ "name": "", "type": "uint16" }],
+    "outputs": [{ "internalType": "uint16", "name": "", "type": "uint16" }],
     "payable": false,
     "stateMutability": "view",
     "type": "function"
@@ -187,25 +162,16 @@
   },
   {
     "constant": true,
-    "inputs": [{ "name": "", "type": "address" }],
+    "inputs": [{ "internalType": "address", "name": "", "type": "address" }],
     "name": "wards",
-    "outputs": [{ "name": "", "type": "uint256" }],
-    "payable": false,
-    "stateMutability": "view",
-    "type": "function"
-  },
-  {
-    "constant": true,
-    "inputs": [],
-    "name": "authority",
-    "outputs": [{ "name": "", "type": "address" }],
+    "outputs": [{ "internalType": "uint256", "name": "", "type": "uint256" }],
     "payable": false,
     "stateMutability": "view",
     "type": "function"
   },
   {
     "constant": false,
-    "inputs": [{ "name": "ts", "type": "uint16" }],
+    "inputs": [{ "internalType": "uint16", "name": "ts", "type": "uint16" }],
     "name": "step",
     "outputs": [],
     "payable": false,
@@ -214,7 +180,7 @@
   },
   {
     "constant": false,
-    "inputs": [{ "name": "a", "type": "address" }],
+    "inputs": [{ "internalType": "address", "name": "a", "type": "address" }],
     "name": "kiss",
     "outputs": [],
     "payable": false,
@@ -222,40 +188,24 @@
     "type": "function"
   },
   {
-    "inputs": [{ "name": "src_", "type": "address" }],
+    "inputs": [
+      { "internalType": "address", "name": "src_", "type": "address" }
+    ],
     "payable": false,
     "stateMutability": "nonpayable",
     "type": "constructor"
   },
   {
     "anonymous": false,
-    "inputs": [{ "indexed": false, "name": "val", "type": "bytes32" }],
-    "name": "LogValue",
-    "type": "event"
-  },
-  {
-    "anonymous": false,
-    "inputs": [{ "indexed": true, "name": "authority", "type": "address" }],
-    "name": "LogSetAuthority",
-    "type": "event"
-  },
-  {
-    "anonymous": false,
-    "inputs": [{ "indexed": true, "name": "owner", "type": "address" }],
-    "name": "LogSetOwner",
-    "type": "event"
-  },
-  {
-    "anonymous": true,
     "inputs": [
-      { "indexed": true, "name": "sig", "type": "bytes4" },
-      { "indexed": true, "name": "guy", "type": "address" },
-      { "indexed": true, "name": "foo", "type": "bytes32" },
-      { "indexed": true, "name": "bar", "type": "bytes32" },
-      { "indexed": false, "name": "wad", "type": "uint256" },
-      { "indexed": false, "name": "fax", "type": "bytes" }
+      {
+        "indexed": false,
+        "internalType": "bytes32",
+        "name": "val",
+        "type": "bytes32"
+      }
     ],
-    "name": "LogNote",
+    "name": "LogValue",
     "type": "event"
   }
 ]

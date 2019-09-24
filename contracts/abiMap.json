@@ -59,5 +59,14 @@
   "MCD_SPOT": "Spotter",
   "MULTICALL": "MultiCall",
   "PIP_*": "DSValue",
-  "PROXY_ACTIONS": "DssProxyActions"
+  "PROXY_ACTIONS": "DssProxyActions",
+  "ZRX": "ZRX",
+  "OMG": "OMG",
+  "BAT": "BAT",
+  "DGD": "DGD",
+  "GNT": "GNT",
+  "MCD_JOIN_OMG_A": "GemJoin2",
+  "MCD_JOIN_DGD_A": "GemJoin2",
+  "MCD_JOIN_GNT_A": "GemJoin4",
+  "MCD_PAUSE_PROXY": "Plan"
 }

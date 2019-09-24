@@ -1,18 +1,20 @@
 [
   {
     "constant": false,
-    "inputs": [{ "name": "_code", "type": "bytes" }],
+    "inputs": [{ "internalType": "bytes", "name": "_code", "type": "bytes" }],
     "name": "write",
-    "outputs": [{ "name": "target", "type": "address" }],
+    "outputs": [
+      { "internalType": "address", "name": "target", "type": "address" }
+    ],
     "payable": false,
     "stateMutability": "nonpayable",
     "type": "function"
   },
   {
     "constant": true,
-    "inputs": [{ "name": "_code", "type": "bytes" }],
+    "inputs": [{ "internalType": "bytes", "name": "_code", "type": "bytes" }],
     "name": "read",
-    "outputs": [{ "name": "", "type": "address" }],
+    "outputs": [{ "internalType": "address", "name": "", "type": "address" }],
     "payable": false,
     "stateMutability": "view",
     "type": "function"

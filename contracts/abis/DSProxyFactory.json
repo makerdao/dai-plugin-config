@@ -1,9 +1,9 @@
 [
   {
     "constant": true,
-    "inputs": [{ "name": "", "type": "address" }],
+    "inputs": [{ "internalType": "address", "name": "", "type": "address" }],
     "name": "isProxy",
-    "outputs": [{ "name": "", "type": "bool" }],
+    "outputs": [{ "internalType": "bool", "name": "", "type": "bool" }],
     "payable": false,
     "stateMutability": "view",
     "type": "function"
@@ -12,7 +12,9 @@
     "constant": true,
     "inputs": [],
     "name": "cache",
-    "outputs": [{ "name": "", "type": "address" }],
+    "outputs": [
+      { "internalType": "contract DSProxyCache", "name": "", "type": "address" }
+    ],
     "payable": false,
     "stateMutability": "view",
     "type": "function"
@@ -21,16 +23,22 @@
     "constant": false,
     "inputs": [],
     "name": "build",
-    "outputs": [{ "name": "proxy", "type": "address" }],
+    "outputs": [
+      { "internalType": "address payable", "name": "proxy", "type": "address" }
+    ],
     "payable": false,
     "stateMutability": "nonpayable",
     "type": "function"
   },
   {
     "constant": false,
-    "inputs": [{ "name": "owner", "type": "address" }],
+    "inputs": [
+      { "internalType": "address", "name": "owner", "type": "address" }
+    ],
     "name": "build",
-    "outputs": [{ "name": "proxy", "type": "address" }],
+    "outputs": [
+      { "internalType": "address payable", "name": "proxy", "type": "address" }
+    ],
     "payable": false,
     "stateMutability": "nonpayable",
     "type": "function"
@@ -44,10 +52,30 @@
   {
     "anonymous": false,
     "inputs": [
-      { "indexed": true, "name": "sender", "type": "address" },
-      { "indexed": true, "name": "owner", "type": "address" },
-      { "indexed": false, "name": "proxy", "type": "address" },
-      { "indexed": false, "name": "cache", "type": "address" }
+      {
+        "indexed": true,
+        "internalType": "address",
+        "name": "sender",
+        "type": "address"
+      },
+      {
+        "indexed": true,
+        "internalType": "address",
+        "name": "owner",
+        "type": "address"
+      },
+      {
+        "indexed": false,
+        "internalType": "address",
+        "name": "proxy",
+        "type": "address"
+      },
+      {
+        "indexed": false,
+        "internalType": "address",
+        "name": "cache",
+        "type": "address"
+      }
     ],
     "name": "Created",
     "type": "event"

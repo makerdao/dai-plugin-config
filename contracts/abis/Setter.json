@@ -1,7 +1,7 @@
 [
   {
     "constant": false,
-    "inputs": [{ "name": "", "type": "address" }],
+    "inputs": [{ "internalType": "address", "name": "", "type": "address" }],
     "name": "file",
     "outputs": [],
     "payable": false,
@@ -11,9 +11,9 @@
   {
     "constant": false,
     "inputs": [
-      { "name": "", "type": "bytes32" },
-      { "name": "", "type": "bytes32" },
-      { "name": "", "type": "uint256" }
+      { "internalType": "bytes32", "name": "", "type": "bytes32" },
+      { "internalType": "bytes32", "name": "", "type": "bytes32" },
+      { "internalType": "uint256", "name": "", "type": "uint256" }
     ],
     "name": "file",
     "outputs": [],
@@ -23,7 +23,7 @@
   },
   {
     "constant": false,
-    "inputs": [{ "name": "", "type": "uint256" }],
+    "inputs": [{ "internalType": "uint256", "name": "", "type": "uint256" }],
     "name": "file",
     "outputs": [],
     "payable": false,
@@ -33,8 +33,8 @@
   {
     "constant": false,
     "inputs": [
-      { "name": "", "type": "bytes32" },
-      { "name": "", "type": "uint256" }
+      { "internalType": "bytes32", "name": "", "type": "bytes32" },
+      { "internalType": "uint256", "name": "", "type": "uint256" }
     ],
     "name": "file",
     "outputs": [],
@@ -44,7 +44,7 @@
   },
   {
     "constant": false,
-    "inputs": [{ "name": "", "type": "bytes32" }],
+    "inputs": [{ "internalType": "bytes32", "name": "", "type": "bytes32" }],
     "name": "init",
     "outputs": [],
     "payable": false,
@@ -53,7 +53,7 @@
   },
   {
     "constant": false,
-    "inputs": [{ "name": "", "type": "address" }],
+    "inputs": [{ "internalType": "address", "name": "", "type": "address" }],
     "name": "rely",
     "outputs": [],
     "payable": false,
@@ -62,7 +62,7 @@
   },
   {
     "constant": false,
-    "inputs": [{ "name": "", "type": "address" }],
+    "inputs": [{ "internalType": "address", "name": "", "type": "address" }],
     "name": "deny",
     "outputs": [],
     "payable": false,
@@ -72,8 +72,8 @@
   {
     "constant": false,
     "inputs": [
-      { "name": "", "type": "bytes32" },
-      { "name": "", "type": "address" }
+      { "internalType": "bytes32", "name": "", "type": "bytes32" },
+      { "internalType": "address", "name": "", "type": "address" }
     ],
     "name": "file",
     "outputs": [],
@@ -84,8 +84,8 @@
   {
     "constant": false,
     "inputs": [
-      { "name": "", "type": "bytes32" },
-      { "name": "", "type": "bytes32" }
+      { "internalType": "bytes32", "name": "", "type": "bytes32" },
+      { "internalType": "bytes32", "name": "", "type": "bytes32" }
     ],
     "name": "file",
     "outputs": [],
@@ -96,9 +96,9 @@
   {
     "constant": false,
     "inputs": [
-      { "name": "", "type": "bytes32" },
-      { "name": "", "type": "bytes32" },
-      { "name": "", "type": "address" }
+      { "internalType": "bytes32", "name": "", "type": "bytes32" },
+      { "internalType": "bytes32", "name": "", "type": "bytes32" },
+      { "internalType": "address", "name": "", "type": "address" }
     ],
     "name": "file",
     "outputs": [],

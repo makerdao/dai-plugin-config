@@ -2,15 +2,12 @@
   {
     "constant": false,
     "inputs": [
-      { "name": "", "type": "address" },
-      { "name": "", "type": "address" },
-      { "name": "", "type": "address" },
-      { "name": "", "type": "address" },
-      { "name": "", "type": "bytes12" },
-      { "name": "", "type": "uint256" },
-      { "name": "", "type": "uint256" }
+      { "internalType": "address", "name": "", "type": "address" },
+      { "internalType": "address", "name": "", "type": "address" },
+      { "internalType": "address", "name": "", "type": "address" },
+      { "internalType": "uint256", "name": "", "type": "uint256" }
     ],
-    "name": "wipeAndFreeETH",
+    "name": "setAuthorityAndDelay",
     "outputs": [],
     "payable": false,
     "stateMutability": "nonpayable",
@@ -19,30 +16,14 @@
   {
     "constant": false,
     "inputs": [
-      { "name": "", "type": "address" },
-      { "name": "", "type": "address" },
-      { "name": "", "type": "address" },
-      { "name": "", "type": "address" },
-      { "name": "", "type": "bytes12" },
-      { "name": "", "type": "uint256" }
+      { "internalType": "address", "name": "", "type": "address" },
+      { "internalType": "address", "name": "", "type": "address" },
+      { "internalType": "address", "name": "", "type": "address" },
+      { "internalType": "bytes32", "name": "", "type": "bytes32" },
+      { "internalType": "bytes32", "name": "", "type": "bytes32" },
+      { "internalType": "uint256", "name": "", "type": "uint256" }
     ],
-    "name": "lockETHAndDraw",
-    "outputs": [],
-    "payable": true,
-    "stateMutability": "payable",
-    "type": "function"
-  },
-  {
-    "constant": false,
-    "inputs": [
-      { "name": "", "type": "address" },
-      { "name": "", "type": "address" },
-      { "name": "", "type": "address" },
-      { "name": "", "type": "bytes12" },
-      { "name": "", "type": "bytes32" },
-      { "name": "", "type": "uint256" }
-    ],
-    "name": "draw",
+    "name": "file",
     "outputs": [],
     "payable": false,
     "stateMutability": "nonpayable",
@@ -51,30 +32,13 @@
   {
     "constant": false,
     "inputs": [
-      { "name": "", "type": "address" },
-      { "name": "", "type": "address" },
-      { "name": "", "type": "address" },
-      { "name": "", "type": "bytes12" }
+      { "internalType": "address", "name": "", "type": "address" },
+      { "internalType": "address", "name": "", "type": "address" },
+      { "internalType": "address", "name": "", "type": "address" },
+      { "internalType": "bytes32", "name": "", "type": "bytes32" },
+      { "internalType": "address", "name": "", "type": "address" }
     ],
-    "name": "lockETH",
-    "outputs": [],
-    "payable": true,
-    "stateMutability": "payable",
-    "type": "function"
-  },
-  {
-    "constant": false,
-    "inputs": [
-      { "name": "", "type": "address" },
-      { "name": "", "type": "address" },
-      { "name": "", "type": "address" },
-      { "name": "", "type": "address" },
-      { "name": "", "type": "bytes12" },
-      { "name": "", "type": "bytes32" },
-      { "name": "", "type": "uint256" },
-      { "name": "", "type": "uint256" }
-    ],
-    "name": "wipeAndFreeGem",
+    "name": "file",
     "outputs": [],
     "payable": false,
     "stateMutability": "nonpayable",
@@ -83,134 +47,13 @@
   {
     "constant": false,
     "inputs": [
-      { "name": "", "type": "address" },
-      { "name": "", "type": "address" },
-      { "name": "", "type": "address" },
-      { "name": "", "type": "address" },
-      { "name": "", "type": "bytes32" },
-      { "name": "", "type": "uint256" },
-      { "name": "", "type": "uint256" }
+      { "internalType": "address", "name": "", "type": "address" },
+      { "internalType": "address", "name": "", "type": "address" },
+      { "internalType": "address", "name": "", "type": "address" },
+      { "internalType": "bytes32", "name": "", "type": "bytes32" },
+      { "internalType": "uint256", "name": "", "type": "uint256" }
     ],
-    "name": "openLockGemAndDraw",
-    "outputs": [{ "name": "cdp", "type": "bytes12" }],
-    "payable": false,
-    "stateMutability": "nonpayable",
-    "type": "function"
-  },
-  {
-    "constant": false,
-    "inputs": [
-      { "name": "", "type": "address" },
-      { "name": "", "type": "address" },
-      { "name": "", "type": "address" },
-      { "name": "", "type": "bytes12" },
-      { "name": "", "type": "bytes32" },
-      { "name": "", "type": "uint256" }
-    ],
-    "name": "freeGem",
-    "outputs": [],
-    "payable": false,
-    "stateMutability": "nonpayable",
-    "type": "function"
-  },
-  {
-    "constant": false,
-    "inputs": [
-      { "name": "", "type": "address" },
-      { "name": "", "type": "address" },
-      { "name": "", "type": "address" },
-      { "name": "", "type": "address" },
-      { "name": "", "type": "uint256" }
-    ],
-    "name": "openLockETHAndDraw",
-    "outputs": [{ "name": "cdp", "type": "bytes12" }],
-    "payable": true,
-    "stateMutability": "payable",
-    "type": "function"
-  },
-  {
-    "constant": false,
-    "inputs": [{ "name": "", "type": "address" }],
-    "name": "open",
-    "outputs": [{ "name": "cdp", "type": "bytes12" }],
-    "payable": false,
-    "stateMutability": "nonpayable",
-    "type": "function"
-  },
-  {
-    "constant": false,
-    "inputs": [
-      { "name": "", "type": "address" },
-      { "name": "", "type": "address" },
-      { "name": "", "type": "address" },
-      { "name": "", "type": "bytes12" },
-      { "name": "", "type": "bytes32" },
-      { "name": "", "type": "uint256" }
-    ],
-    "name": "wipe",
-    "outputs": [],
-    "payable": false,
-    "stateMutability": "nonpayable",
-    "type": "function"
-  },
-  {
-    "constant": false,
-    "inputs": [
-      { "name": "", "type": "address" },
-      { "name": "", "type": "address" },
-      { "name": "", "type": "address" },
-      { "name": "", "type": "bytes12" },
-      { "name": "", "type": "uint256" }
-    ],
-    "name": "freeETH",
-    "outputs": [],
-    "payable": false,
-    "stateMutability": "nonpayable",
-    "type": "function"
-  },
-  {
-    "constant": false,
-    "inputs": [
-      { "name": "", "type": "address" },
-      { "name": "", "type": "address" },
-      { "name": "", "type": "address" },
-      { "name": "", "type": "address" },
-      { "name": "", "type": "bytes12" },
-      { "name": "", "type": "bytes32" },
-      { "name": "", "type": "uint256" },
-      { "name": "", "type": "uint256" }
-    ],
-    "name": "lockGemAndDraw",
-    "outputs": [],
-    "payable": false,
-    "stateMutability": "nonpayable",
-    "type": "function"
-  },
-  {
-    "constant": false,
-    "inputs": [
-      { "name": "", "type": "address" },
-      { "name": "", "type": "address" },
-      { "name": "", "type": "address" },
-      { "name": "", "type": "bytes12" },
-      { "name": "", "type": "bytes32" },
-      { "name": "", "type": "uint256" }
-    ],
-    "name": "lockGem",
-    "outputs": [],
-    "payable": false,
-    "stateMutability": "nonpayable",
-    "type": "function"
-  },
-  {
-    "constant": false,
-    "inputs": [
-      { "name": "", "type": "address" },
-      { "name": "", "type": "bytes12" },
-      { "name": "", "type": "address" },
-      { "name": "", "type": "bool" }
-    ],
-    "name": "allow",
+    "name": "file",
     "outputs": [],
     "payable": false,
     "stateMutability": "nonpayable",
