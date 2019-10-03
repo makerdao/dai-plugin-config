@@ -1,6 +1,8 @@
+import debug from 'debug';
 import { formatContracts, mapTokens } from './utils/configHelper';
 const APP_URL_DEV = 'http://localhost:4000/chain/';
 const APP_URL_PROD = 'http://18.185.172.121:4000/chain/';
+const log = debug('dai-plugin-config:index');
 
 let config = {};
 
@@ -18,7 +20,7 @@ const setUrl = env => {
 export default {
   beforeCreate: async function({ testchainId, backendEnv = 'prod' }) {
     const url = backendEnv ? setUrl(backendEnv) : APP_URL_PROD;
-    console.log('fetch url', `${url}${testchainId}`);
+    log('fetch url', `${url}${testchainId}`);
 
     try {
       const res = await fetch(`${url}${testchainId}`);
