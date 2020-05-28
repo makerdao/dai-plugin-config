@@ -90,10 +90,10 @@
     lodash "^4.17.10"
     to-fast-properties "^2.0.0"
 
-"@makerdao/currency@^0.9.3":
-  version "0.9.3"
-  resolved "https://registry.yarnpkg.com/@makerdao/currency/-/currency-0.9.3.tgz#27510303771506b4b64998ce3b15c39b2d558fd9"
-  integrity sha512-WNf8x+aJBErpj/PAzcr91PseQ3P9/f34Hey+qvndWEQ+LAr7LOWgcpTMryLZK1f2rn/k2zBcuWSbwe4XkrxRhA==
+"@makerdao/currency@^0.9.8":
+  version "0.9.8"
+  resolved "https://registry.yarnpkg.com/@makerdao/currency/-/currency-0.9.8.tgz#97b853bee7d366499c0f265d1135662dd7d77e0a"
+  integrity sha512-Vd6i3iuInk4PMOi8eG5aZbF5yHy2To5Un9o/c4NxfjInhi5owE5O3VKNua1Z6yaW33PQNt8NqQGcCItNZMnnxw==
   dependencies:
     babel-runtime "^6.26.0"
     bignumber.js "^8.1.1"
