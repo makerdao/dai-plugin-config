@@ -32,7 +32,8 @@
     "test": "jest --runInBand",
     "build": "./scripts/build.sh",
     "precommit": "lint-staged",
-    "build:watch": "sane ./scripts/build.sh src --wait=10"
+    "build:watch": "sane ./scripts/build.sh src --wait=10",
+    "prepublishOnly": "yarn build"
   },
   "lint-staged": {
     "*.{js,json}": [
@@ -40,6 +41,9 @@
       "git add"
     ]
   },
-  "module": "src/index.js",
-  "main": "src/index.js"
+  "module": "dist/src/index.js",
+  "main": "dist/src/index.js",
+  "files": [
+    "dist/**/*"
+  ]
 }
