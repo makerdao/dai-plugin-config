@@ -51,7 +51,17 @@ config = {
 
 We run Prettier on-commit, which means you can write code in whatever style you want and it will be automatically formatted according to the common style when you run `git commit`.
 
-### License
+## Publishing
+
+To publish this package, simply run:
+```bash
+yarn publish
+```
+This will prompt for a new version, create a new commit and tag for that version, **automatically build the project** and then publish the package to npm.
+
+Don't forget to use `git push --tags` to push the commit with the new version **along with** the new tag pointing to it.
+
+## License
 
 The dai config plugin is [MIT licensed](./LICENSE).
 
